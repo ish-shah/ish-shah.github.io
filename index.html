@@ -7,6 +7,16 @@
             background-color: #fafafa;
             font-family: 'Helvetica', 'Arial', sans-serif;
         }
+        .body-inside {
+            max-width:1200px;
+            margin:25px auto 25px auto;
+        }
+        .body-inside ul {
+            margin-right: 400px;
+        }
+        .body-inside li {
+            padding-bottom: 5px;
+        }
         .navbar {
             width: 100%;
             overflow: hidden;
@@ -17,36 +27,23 @@
             color: #adadad;
             text-align: center;
             padding: 16px 16px;
-            font-size: 17px;
+            font-size: 20px;
             text-decoration: none
         }
-
         .navbar a:hover {
             color: #ddd;
         }
-
-        .navbar a.active {
-            color: white;
-        }
-
         .navbar-bigtext a {
             float: left;
             color:white;
             text-align: center;
             padding: 14px 16px;
-            font-size: 24px;
+            font-size: 28px;
             padding: 14px 16px;
             text-decoration: none
         }
-
         .navbar-bigtext a:hover {
-            float: left;
             color:white;
-            text-align: center;
-            padding: 14px 16px;
-            font-size: 24px;
-            padding: 14px 16px;
-            text-decoration: none
         }
     </style>
 </head>
@@ -54,11 +51,32 @@
 <body>
     <div class="navbar">
         <div class="navbar-bigtext"><a href="index.html">Ish Shah</a></div>
-        <!-- <a href="teaching.html">Teaching</a> -->
+        <a href="teaching.html">Teaching</a>
         <a href="papers.html">Papers</a>
         <a href="index.html">Home</a>
     </div>
-    <h2>About</h2>
+    <div class="body-inside">
+        <h2>About</h2>
+        <ul>
+            <li>
+                I am a third-year undergraduate student at Rutgers University, currently pursuing a Bachelor of Science in Mathematics with a second major in Computer Science.
+            </li>
+            <li>
+                My current interests lie in mathematical analysis, specifically harmonic analysis and analytic number theory.
+            </li>
+            <li>
+                In the summer of 2024, I participated in the DIMACS REU at Rutgers. There, I was mentored by Mariusz Mirek and Leonidas Daskalakis. The website for my work that summer is available <a href="https://reu.dimacs.rutgers.edu/~irs51/">here</a>.
+            </li>
+            <li>
+                You can contact me using my email: <strong>irs51 [at] scarletmail [dot] rutgers [dot] edu</strong>.
+            </li>
+        </ul>
+        <a href="cv.pdf">Here is a link to my CV.</a>
+
+        <p>
+            See my Teaching and Papers pages for more information.
+        </p>
+    </div>
 </body>
 
 </html>
