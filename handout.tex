@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath, amssymb, amsthm} % Useful packages for writing math
+\usepackage{hyperref} % Package for hyperlinks
+
+\hypersetup{ % some hyperlinking setup
+    colorlinks=true,
+    linkcolor=blue,     
+    urlcolor=blue
+}
+
+\title{\LaTeX workshop: sample 1}
+\author{RUMA, SPS, and You!}
+\date{March 26, 2025}
+
+% The code which contributes to your PDF output starts below.
+% The above section is known as the preamble. The preamble is a good place for the following:
+% - choosing the type of document (article, exam, book, etc.) - see \documentclass
+% - importing packages through \usepackage
+% - setting the tile, author, and date for your document
+% - defining "macros": shorthands for certain pieces of code you expect will be important (more on this later!)
+\begin{document}
+
+\maketitle % this puts the title, author, and date at the top of the page.
+
+\section{Hello} % This starts a section titled "Hello".
+Welcome to the RUMA$\,\times\,$SPS \LaTeX workshop event! Are you reading the source file or the output file? If you're reading the source, you should see the following message. % This is a comment. Use it to write notes to yourself about the LaTeX you are writing but don't want included in your output. To make a comment, simply put % followed by your comment. No LaTeX after the % on that line will contribute to the output.
+
+% Exercise: Write a comment below, right above the subsection begins.
+
+
+\subsection{Getting started} % a smaller section header nested within a section
+You're probably here for one of two reasons:
+\begin{enumerate}
+    \item You want to learn \LaTeX. Maybe this is because you want to learn some way of typesetting documents which interacts nicely with math.
+    \item You want free pizza.
+\end{enumerate}
+If you're here for the former, this is where we'll start getting into writing mathematics on \LaTeX.
+
+Mathematical expressions and equations can be written inline: $a^2+b^2=c^2$ and \( A \cap (B \cap C)=(A \cap B) \cap C \), for example. The former was written with the code \texttt{\$a\^{}2+b\^{}2=c\^{}2\$}, and the latter was written with the code \\ \texttt{\textbackslash( A \textbackslash cap (B \textbackslash cap C)=(A \textbackslash cap B) \textbackslash cap C \textbackslash)}. Notice that you can use either \texttt{\$equation\$} or \texttt{\textbackslash( equation \textbackslash)} for inline equations.
+
+You can also write equations isolated on their own lines, done with \texttt{\textbackslash[ \textbackslash]} or the environment \texttt{equation*} as shown below:
+\[
+    \oint_{\partial\Omega} f(z) \, dz=2 \pi i\sum_{\substack{z_i\in\Omega\\z_i\text{ pole}}}\operatorname{Res}(f,z_i)
+\]
+and
+\begin{equation*}
+    F_n=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right].
+\end{equation*}
+You can also number equations by using \texttt{equation} without the *:
+\begin{equation}
+    |G|=[G:H]|H|.
+\end{equation}
+For multi-line equations or expressions, you can use the \texttt{align*} environment (or without the * to have the equations numbered), with line breaks being inserted with \texttt{\textbackslash\textbackslash}. You can anchor align environments using \& (this is why the term ``align'' is used):
+\begin{align*}
+    \int e^x \cos x \, dx &= e^x \sin x-\int e^x \sin x \, dx \\
+    &= e^x \sin x - \left(-e^x \cos x + \int e^x \cos x \,dx\right) \\
+    &= e^x \sin x + e^x \cos x - \int e^x \cos x \,dx.
+\end{align*}
+Now that you know how to insert equations, you need to know how to write the symbols which populate these equations. You can see some symbols in the above equation examples; some more examples are available below.
+\begin{align*}
+    \int_a^b f(x) \,dx && \sum_{n=a}^b && \mathbb{R} && \frac{a}{b} \\
+    \sqrt[n]{a} && \lim_{x \to a}f(x) && \infty && x^y \\
+    x_n && \{ x : 2 \mid x \} && \lVert \cdot \rVert && A \subseteq B
+\end{align*}
+These are only some examples of the symbols \LaTeX lets you insert into equations. There are many more! If there's a symbol you would like to insert and you don't know how to get in in \LaTeX code, try visiting \href{https://detexify.kirelabs.org/classify.html}{detexify}!
+
+\noindent\hspace{-2cm}\rule{16cm}{0.4pt} % add a horizontal line
+\vspace{0.2cm} % add vertical space
+
+\noindent
+Try using the following space to play around with more symbols in various equations and expressions! You are going to be presented with some exercises at the workshop, which you can try out in this space.
+
+% maybe consider adding code below this line
+
+
+\vspace{0.2cm}
+\noindent\hspace{-2cm}\rule{16cm}{0.4pt}
+
+\end{document}
