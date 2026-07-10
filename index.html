@@ -1,66 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ish Shah's website</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        table.intro {
-            border-spacing: 10px;
-            margin-left: -10px;
-            margin-top: -25px;
-            margin-bottom: -25px;
-        }
-    </style>
 </head>
-
 <body>
-    <div class="navbar">
-        <div class="navbar-bigtext"><a href="/">Ish Shah</a></div>
-        <a href="teaching">Teaching</a>
-        <a href="papers">Papers</a>
-        <a class="current" href="/">Home</a>
-    </div>
-    <div class="body-inside">
-        <h2>About</h2>
-        <table class="intro">
-            <td valign="top" width="800px" padding="15px">
-                <p>
-                    I am an incoming graduate student at the University of Illinois Urbana-Champaign.
-                    Previously, I was an undergraduate student at Rutgers University until 2026. As an undergraduate, I participated in the 2025 Clemson University REU in Number Theory and the 2024 DIMACS REU.
-                </p>
-                <p>
-                    Within mathematics, I am primarily interested in analysis. More specifically, I would describe my interests as being in harmonic analysis and its applications, including those to analytic number theory and partial differential equations.
-                </p>
-                <p>
-                    You can see my Papers and Teaching pages, as well as my CV (linked below), for more information. You can reach me by email: <strong>ishs2 [at] illinois [dot] edu</strong>.
-                </p>
-            </td>
-            <td align="center" width="360px">
-                <!-- A picture will be inserted here... or so they say -->
-            </td>
-        </table>
 
-        <h2>Links</h2>
-        <ul>
-            <li>
-                <a href="cv.pdf">My CV</a>
-            </li>
-            <li>
-                <a href="https://reu.dimacs.rutgers.edu/~irs51/">My DIMACS REU site</a>
-            </li>
-        </ul>
-        <h2>
-            News
-        </h2>
-        <ul>
-            <li>
-                <strong>April 12, 2026:</strong> I received an Honorable Mention in the 2026 NSF GRFP competition! 
-            </li>
-            <li>
-                <strong>October 25, 2024:</strong> I was awarded the Excellent PTL/Grader Award from the Department of Computer Science at Rutgers University! <a href="https://www.cs.rutgers.edu/news-events/highlights/highlight-item/celebrating-excellence-in-the-rutgers-computer-science-department">(highlight)</a>
-            </li>
-        </ul>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html" class="nav-brand">Ish Shah</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="profile-grid">
+                <div class="profile-text">
+                    <p>
+                        I am an incoming graduate student at the University of Illinois Urbana-Champaign.
+                        Previously, I was an undergraduate student at Rutgers University until 2026. As an undergraduate, I participated in the 2025 Clemson University REU in Number Theory and the <a href="https://reu.dimacs.rutgers.edu/~irs51/">2024 DIMACS REU</a>.
+                    </p>
+                    <p>
+                        Within mathematics, I am primarily interested in analysis. More specifically, I would describe my interests as being in harmonic analysis and its applications, including those to analytic number theory and partial differential equations.
+                    </p>
+                    <p>
+                        You can see my Papers and Teaching pages, as well as my CV, for more information. You can reach me by email: <strong>ishs2 [at] illinois [dot] edu</strong>.
+                    </p>
+                </div>
+                
+                <div class="profile-pic-container">
+                    <!-- <img src="noimagehere" alt="Ish Shah" class="profile-pic"> --> <!-- should I decide to add an image -->
+                    <ul class="personal-links">
+                        <!-- <li><a href="mailto:ishs2@illinois.edu">Email</a></li> -->
+                        <!-- <li><a href="https://scholar.google.com" target="_blank">Google Scholar</a></li> --> <!-- if this is ever active -->
+                        <li><a href="cv.pdf" target="_blank">Curriculum Vitae (PDF)</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>News</h2>
+                <ul class="news-list">
+                    <li><span class="news-date">Apr 2026</span> Received an Honorable Mention in the 2026 NSF GRFP competition.</li>
+                    <li><span class="news-date">Oct 2024</span> Awarded the Excellent PTL/Grader Award from the Department of Computer Science at Rutgers University. <a href="https://www.cs.rutgers.edu/news-events/highlights/highlight-item/celebrating-excellence-in-the-rutgers-computer-science-department">(highlight)</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Ish Shah. Hosted using GitHub Pages.</p>
+        </footer>
     </div>
+
 </body>
-
 </html>
