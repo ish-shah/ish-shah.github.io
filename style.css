@@ -154,20 +154,6 @@ p {
     margin-top: 4px;
 }
 
-.news-list {
-    list-style: none;
-}
-
-.news-list li {
-    margin-bottom: 10px;
-}
-
-.news-date {
-    font-weight: 600;
-    color: var(--accent-color);
-    margin-right: 10px;
-}
-
 /* --- Footer --- */
 footer {
     text-align: center;
@@ -175,6 +161,89 @@ footer {
     font-size: 0.85rem;
     color: var(--text-muted);
     border-top: 1px solid var(--border-color);
+}
+
+/* --- News section --- */
+
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.news-list li {
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.news-list li:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.news-item summary {
+    list-style: none;
+}
+.news-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #ffffff;
+    user-select: none;
+}
+
+.news-date {
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-right: 12px;
+}
+
+.toggle-icon::before {
+    content: "+";
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-muted);
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.news-item[open] .toggle-icon::before {
+    content: "−";
+    color: var(--accent-color);
+}
+
+.news-content {
+    padding: 0 15px 15px 15px;
+    background-color: var(--light-gray);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.95rem;
+    color: var(--text-color);
+    animation: slideDown 0.2s ease-out;
+}
+
+.news-content p {
+    margin: 0;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* --- Mobile-friendliness --- */
@@ -190,12 +259,12 @@ footer {
     }
 
     .profile-grid {
-        grid-template-columns: 1fr; /* Stack picture details below or above text */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
     .profile-pic-container {
-        order: -1; /* Puts the profile picture at the top on mobile screens */
+        order: -1; /* Profile at top of page on mobile */
     }
     
     .personal-links {
